@@ -1,0 +1,124 @@
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+    <title>Printer</title>
+</head><header>
+	<nav class="navbar navbar-expand-custom navbar-mainbg">
+		<a class="navbar-brand navbar-logo" href="/">Printer</a>
+		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<i class="fas fa-bars text-white"></i>
+		</button>
+	</nav>
+</header>
+<body>
+    <div class= "printerStatus">
+        <h1>Printer Status</h1>
+		 <h3>{{  key  }}</h3>
+		 <br>
+		 <form class="operator" method="POST" enctype="multipart/form-data" action="/print">
+			<input type="file" name="doc">
+			<input type="submit" name="Print" value="Print" >
+			
+		</form>
+		<br>
+		<br>
+		<form class="operator" method="POST" action="/pause">
+			<input type="submit" name="Pause" value="Pause">
+		</form>
+		<br>
+		<form class="operator" method="POST" action="/resume">
+			<input type="submit" name="Resume" value="Resume" href="/resume">
+		</form>
+		<br>
+		<form class="operator" method="POST" action="/cancel">
+			<input type="submit" name="Cancel" value="Cancel" href="/cancel">
+		</form>
+		<br>
+		<form class="operator" method="POST">
+			<input type="submit" name="Power On" value="powerOn">
+			<input type="submit" name="Power Off" value="powerOff">
+		</form>
+		<br>
+        </div>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  scroll-padding-top:4rem;
+  list-style:none;
+  text-decoration:none;
+}
+
+:root{
+   --main-color:#2288ff;
+   --second-color:#192f6a;
+   --text-color:#314862;
+   --bg-color:#fff;
+
+   --box-shadow: 2px 2px 18px rgb(14 52 54 / 15%);
+}
+img {
+	width: 100%;
+}
+body {
+	color: var(--text-color) ;
+}
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 35px;
+	background-color:rgb(240, 240, 240);
+	color:rgb(0, 0, 117);
+}
+.navbar{
+	display: flex;
+}
+.navbar a {
+	padding: 8px 17px;
+
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.navbar a:hover {
+	color: var(--main-color) ;
+}
+.btn {
+	padding: 8px 22px;
+	background: var(--main-color);
+	color: var(--bg-color) ;
+	border-radius: 5rem;
+
+}
+.btn:hover {
+	background: gray;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-size : cover;
+	background-position: center;
+}
+
+.printerStatus{
+	background : #fff;
+	padding: 20px;
+	margin: 10% auto 0;
+	text-align: center;
+}
+.printerStatus h1{
+	color: gray;
+	margin-bottom : 30px;
+}
+
+</style>
